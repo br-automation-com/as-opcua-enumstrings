@@ -1,0 +1,10 @@
+VAR
+	VariableRd0 : STRING[255];
+	StepEnumStrings : ARRAY[0..2] OF UALocalizedText;
+	Step : StepEnum;
+	StepDimensions : ARRAY[0..0] OF UDINT;
+	fbHandle : UA_NodeGetHandle := (NodeID:=(NamespaceIndex:=6,Identifier:='::Program:Step#EnumStrings',IdentifierType:=UAIdentifierType_String),Timeout:=T#30s);
+	fbConnect : UA_Connect := (ServerEndpointUrl:='opc.tcp://localhost:4840',SessionConnectInfo:=(SessionName:='BuR',ApplicationName:='EnumStrings',SecurityMsgMode:=UASecurityMsgMode_None,SecurityPolicy:=UASecurityPolicy_None,TransportProfile:=UATP_UATcp,UserIdentityToken:=(UserIdentityTokenType:=UAUITT_Anonymous,TokenParam1:='',TokenParam2:=''),SessionTimeout:=T#5m,MonitorConnection:=T#1m),Timeout:=T#30s);
+	fbRead : UA_Read := (0);
+	fbDisconnect : UA_Disconnect := (Timeout:=T#30s);
+END_VAR

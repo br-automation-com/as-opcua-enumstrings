@@ -1,0 +1,4 @@
+VAR
+	Step : Step_typ;
+	dStep : REFERENCE TO DINT;
+END_VAR
