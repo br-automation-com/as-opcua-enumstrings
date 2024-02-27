@@ -1,0 +1,14 @@
+VAR
+	VariableRd0 : STRING[255] := '';
+	fbRead : UA_Read := (Timeout:=T#30s);
+	StepEnumStrings : ARRAY[0..2] OF UALocalizedText;
+	fbHandle : UA_NodeGetHandle := (Timeout:=T#30s);
+	Step : StepEnum := tpRUNNING;
+	fbConnect : UA_Connect := (ServerEndpointUrl:='opc.tcp://127.0.0.1:4840',SessionConnectInfo:=(SessionName:='BuR',ApplicationName:='Enum',SecurityMsgMode:=UASecurityMsgMode_None,SecurityPolicy:=UASecurityPolicy_None,TransportProfile:=UATP_UATcp,UserIdentityToken:=(UserIdentityTokenType:=UAUITT_Anonymous),SessionTimeout:=T#1m,MonitorConnection:=T#30s),Timeout:=T#30s);
+	fbTranslate : UA_TranslatePath := (Timeout:=T#30s);
+	StepDimensions : ARRAY[0..0] OF UDINT;
+	fbDisconnect : UA_Disconnect := (Timeout:=T#30s);
+	TaskName : STRING[19] := '';
+	grp : USINT;
+	StepDataType : UANodeID;
+END_VAR

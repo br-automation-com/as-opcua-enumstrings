@@ -3,11 +3,13 @@
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="Program" Language="IEC">GetEnum</Object>
+    <Object Type="Program" Language="IEC">ReadEnum</Object>
     <Object Type="Program" Language="IEC">Program</Object>
     <Object Type="File">Readme.md</Object>
     <Object Type="File">#EnumStrings.png</Object>
     <Object Type="File">Step.png</Object>
     <Object Type="File">Step_typ.png</Object>
+    <Object Type="File">AS4EnumStrings.png</Object>
   </Objects>
   <Dependencies>
     <Dependency ObjectName="AsOpcUas" />
