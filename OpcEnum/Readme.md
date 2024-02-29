@@ -43,11 +43,11 @@ Contains variable Step of Enumtype Step_typ with 3 enums: STATE_WAT, STATE_RUN a
 So in this case **UALocalizedText[0..2]**. Otherwise error Bad_TypeMismatch 0x80740000 is generated.(The value provided for the attribute is not of the same type as the attribute's value. )
 
 The ReadEnum task can also be used in AS\AR6 after some **adaptions**.\
-Adaptions needed:\
-The Identifier '::Progam:Step' has moved from NamespaceIndex 6 to NamespaceIndex 5.
-The enums UASecurityMsgMode_None, UASecurityPolicy_None, UAIdentifierType_String have changed.
-UASecurityMsgMode_None -> UASMM_None\
-UASecurityPolicy_None -> UASP_None\
-UAIdentifierType_String -> UAIT_String\
-The NodeAddInfo.AttributeId has changed to NodeAddInfo.AttributeID.
+**Adaptions needed:**\
+The Identifier '::Program:Step' has moved from NamespaceIndex 6 to NamespaceIndex **5**.\
+The enums UASecurityMsgMode_None, UASecurityPolicy_None, UAIdentifierType_String have changed.\
+UASecurityMsgMode_None -> **UASMM_None**\
+UASecurityPolicy_None -> **UASP_None**\
+UAIdentifierType_String -> **UAIT_String**\
+The NodeAddInfo.AttributeId has changed to NodeAddInfo.Attribute**ID**.\
 In AS\AR6 it is not needed any more that the Step EnumStrings array of UALocalizedText is the exact same length. The array can be larger.
